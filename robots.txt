@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Excluir archivos de servidor y backend
+Disallow: /phpmailer/
+Disallow: /mail.php
+
+# Mapa del sitio XML
+Sitemap: https://iandes.cl/sitemap.xml

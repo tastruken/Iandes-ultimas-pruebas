@@ -311,17 +311,17 @@
                         </div>
                     </div>
 
-                    <div class="floorplan-container reveal">
+                    <div class="floorplan-container reveal" id="planos">
                         <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Planos y Modelos</h3>
                         
                         <div class="floorplan-nav-tabs">
-                            <button class="floorplan-nav-tab active" data-id="oficina-mini">OFICINA 60 M²</button>
-                            <button class="floorplan-nav-tab" data-id="oficina-maxi">OFICINA 120 M²</button>
+                            <button class="floorplan-nav-tab active" data-id="oficina-a">OFICINA TIPO A</button>
+                            <button class="floorplan-nav-tab" data-id="oficina-b">OFICINA TIPO B</button>
                         </div>
                         
                         <div class="floorplan-viewer-grid">
-                            <div class="floorplan-img-box">
-                                <img id="selected-floorplan-img" src="assets/images/proyectos/proyecto-work-plaza/plano-oficina.webp" alt="Plano Seleccionado">
+                            <div class="floorplan-img-box" style="min-height: 400px; background: #FFFFFF;">
+                                <img id="selected-floorplan-img" src="assets/images/proyectos/proyecto-work-plaza/OFICINA TIPO A.webp" alt="Plano Oficina Tipo A - Work Plaza" style="max-height: 400px; width: auto; object-fit: contain;">
                                 <button class="model-zoom-btn" id="zoom-floorplan-btn" aria-label="Ampliar plano" style="position: absolute; bottom: 1rem; right: 1rem; z-index: 10;">
                                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
@@ -329,12 +329,12 @@
                                 </button>
                             </div>
                             <div class="floorplan-details-box">
-                                <h4 id="selected-floorplan-name" style="font-size: 1.5rem; color:var(--color-primary); font-weight:600;">Oficina 60 m²</h4>
+                                <h4 id="selected-floorplan-name" style="font-size: 1.5rem; color:var(--color-primary); font-weight:600;">Oficina Tipo A</h4>
                                 <hr class="model-divider" style="margin: 0.5rem 0; border: 0; border-top: 1px solid var(--color-border);">
                                 <ul class="floorplan-specs">
-                                    <li><svg class="icon-svg" viewBox="0 0 24 24" style="margin-right:0.5rem; width:1.1rem; height:1.1rem; color:var(--color-text-muted);"><path d="M2 4v16M2 8h20M2 17h20M22 8v9M6 8v3a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" /></svg><span id="selected-floorplan-dorm">1 Planta Libre</span></li>
-                                    <li><svg class="icon-svg" viewBox="0 0 24 24" style="margin-right:0.5rem; width:1.1rem; height:1.1rem; color:var(--color-text-muted);"><path d="M9 6a3 3 0 1 1 6 0v4M2 14h20M4 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4H4v4zM7 16v4M17 20v-4" /></svg><span id="selected-floorplan-bano">1 Baño</span></li>
-                                    <li><svg class="icon-svg" viewBox="0 0 24 24" style="margin-right:0.5rem; width:1.1rem; height:1.1rem; color:var(--color-text-muted);"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18M3 9h18M9 9l3-3M3 15l3-3M15 9l3-3M9 15l3-3" /></svg><span id="selected-floorplan-sup">60.0 m² Superficie</span></li>
+                                    <li><svg class="icon-svg" viewBox="0 0 24 24" style="margin-right:0.5rem; width:1.1rem; height:1.1rem; color:var(--color-text-muted);"><path d="M2 4v16M2 8h20M2 17h20M22 8v9M6 8v3a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" /></svg><span id="selected-floorplan-dorm">Uso Odontológico / Clínico</span></li>
+                                    <li><svg class="icon-svg" viewBox="0 0 24 24" style="margin-right:0.5rem; width:1.1rem; height:1.1rem; color:var(--color-text-muted);"><path d="M9 6a3 3 0 1 1 6 0v4M2 14h20M4 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4H4v4zM7 16v4M17 20v-4" /></svg><span id="selected-floorplan-bano">1 Baño + Closet Insumos</span></li>
+                                    <li><svg class="icon-svg" viewBox="0 0 24 24" style="margin-right:0.5rem; width:1.1rem; height:1.1rem; color:var(--color-text-muted);"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 3v18M3 9h18M9 9l3-3M3 15l3-3M15 9l3-3M9 15l3-3" /></svg><span id="selected-floorplan-sup">29 a 35 m² Superficie</span></li>
                                 </ul>
                                 <button class="btn btn-secondary caluga-cotizar" id="floorplan-cotizar-btn" style="width: 100%; margin-top: 0.5rem;">Cotizar este modelo</button>
                                 <a href="assets/docs/workplaza.pdf" target="_blank" rel="noopener" class="btn-download-pdf">
@@ -758,21 +758,37 @@
 
         // Módulo de Planos y Modelos Interactivo
         const modelData = {
-            'oficina-mini': {
-                title: 'Oficina 60 m²',
+            'oficina-a': {
+                title: 'Oficina Tipo A',
                 price: '2.216',
-                dorm: '1 Planta Libre',
-                bano: '1 Baño',
-                sup: '60.0 m²',
-                img: 'assets/images/proyectos/proyecto-work-plaza/plano-oficina.webp'
+                dorm: 'Uso Odontológico / Clínico',
+                bano: '1 Baño + Closet Insumos',
+                sup: '29 a 35 m²',
+                img: 'assets/images/proyectos/proyecto-work-plaza/OFICINA TIPO A.webp'
+            },
+            'oficina-b': {
+                title: 'Oficina Tipo B',
+                price: '2.216',
+                dorm: 'Uso Odontológico / Clínico',
+                bano: '1 a 2 Baños',
+                sup: '40 a 64 m²',
+                img: 'assets/images/proyectos/proyecto-work-plaza/OFICINA TIPO B.webp'
+            },
+            'oficina-mini': {
+                title: 'Oficina Tipo A',
+                price: '2.216',
+                dorm: 'Uso Odontológico / Clínico',
+                bano: '1 Baño + Closet Insumos',
+                sup: '29 a 35 m²',
+                img: 'assets/images/proyectos/proyecto-work-plaza/OFICINA TIPO A.webp'
             },
             'oficina-maxi': {
-                title: 'Oficina 120 m²',
+                title: 'Oficina Tipo B',
                 price: '2.216',
-                dorm: '3 Privados',
-                bano: '2 Baños',
-                sup: '120.0 m²',
-                img: 'assets/images/proyectos/proyecto-work-plaza/plano-oficina.webp'
+                dorm: 'Uso Odontológico / Clínico',
+                bano: '1 a 2 Baños',
+                sup: '40 a 64 m²',
+                img: 'assets/images/proyectos/proyecto-work-plaza/OFICINA TIPO B.webp'
             }
         };
 
@@ -790,7 +806,10 @@
             const data = modelData[key];
             if (!data) return;
 
-            if (selectedFloorplanImg) selectedFloorplanImg.src = data.img;
+            if (selectedFloorplanImg) {
+                selectedFloorplanImg.src = data.img;
+                selectedFloorplanImg.alt = `Plano ${data.title} - Work Plaza`;
+            }
             if (selectedFloorplanName) selectedFloorplanName.textContent = data.title;
             if (selectedFloorplanDorm) selectedFloorplanDorm.textContent = data.dorm;
             if (selectedFloorplanBano) selectedFloorplanBano.textContent = data.bano;
@@ -843,7 +862,7 @@
         }
 
         updateMediaGallery();
-        updateFloorplanViewer('oficina-mini');
+        updateFloorplanViewer('oficina-a');
 
         // Lógica de Zoom del Plano (Lightbox/Modal)
         const zoomFloorplanBtn = document.getElementById('zoom-floorplan-btn');

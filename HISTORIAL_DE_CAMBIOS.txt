@@ -1,0 +1,268 @@
+================================================================================
+HISTORIAL GENERAL DE CAMBIOS Y OPTIMIZACIONES - INMOBILIARIA IANDES
+================================================================================
+Fecha de registro: 12 de Octubre, 2026
+Ubicación del proyecto: CONSTRUCTORA - SUBIR
+Objetivo: Ajustes comerciales, homologación de fichas, promociones, obras entregadas,
+           SEO on-page y arquitectura de medición para Google Ads.
+
+================================================================================
+1. ACTUALIZACIONES EN FICHAS DE PROYECTO INDIVIDUALES
+================================================================================
+
+A. PROYECTO ANDES MACUL (proyecto-andes-macul.html)
+   - Hero Bar: Se restableció el estilo estándar homogéneo con el resto del sitio
+     (36 a 55 m² totales, 1 a 2 dormitorios, Entrega 1er Semestre 2026).
+   - Concepto alternativo de Hero: Se mantuvo en el código pero oculto
+     (display: none) con comentarios explicativos claros para su reactivación futura.
+   - Cotizador comercial:
+     * Precio base fijado en "Desde UF 3.920*".
+     * Nota legal incorporada: "*Precio desde sujeto a stock y descuento. Verifica en sala de ventas".
+   - Sala de ventas: Los Clarines 3093, Macul.
+
+B. PROYECTO ANDES ÑUÑOA (proyecto-andes-nunoa.html)
+   - Hero Bar y Cotizador:
+     * Precio base unificado en "DESDE UF 3.938*" en HTML.
+     * Nota legal incorporada: "*Precio desde sujeto a stock y descuento. Verifica en sala de ventas".
+   - JavaScript: Se corrigió la función dinámica de tipologías para que al cambiar
+     de modelo el precio base se mantenga consistentemente en UF 3.938.
+   - Sala de ventas: Capitán Orella 2575, Ñuñoa.
+
+C. PROYECTO CAMINO DE LA VILLA (proyecto-camino-villa.html)
+   - Hero Bar:
+     * Tipología actualizada a "2 A 3 DORMITORIOS".
+     * Entrega actualizada a "3ER TRIMESTRE 2028".
+     * Precio base: "DESDE UF 11.502".
+   - Cotizador comercial:
+     * Eliminado completamente el bloque de "Renta Sugerida" (HTML y JavaScript).
+     * Precio base fijado en "Desde UF 11.502*".
+     * Nota legal: "*Precio desde sujeto a stock y descuento. Verifica en sala de ventas".
+   - Asesor Comercial:
+     * Tarjeta de ejecutiva actualizada a "José Verme" (Asesor Comercial Senior).
+     * Enlace directo a WhatsApp actualizado con número y mensaje para José Verme.
+   - Sala de ventas:
+     * Dirección y textos actualizados a "Camino de la Villa 671, Lo Barnechea".
+     * Enlaces de Waze, Google Maps e iframe embebido alineados a Camino de la Villa 671.
+   - Modelos y Plantas:
+     * Modelos F y J corregidos de 2B a "DEPTO 2D + 3B" (3 Baños).
+
+D. PROYECTO WORK PLAZA (proyecto-work-plaza.html)
+   - Cotizador comercial:
+     * Eliminado completamente el bloque de "Renta Sugerida" en HTML y JS.
+     * Precio fijado en "Desde UF 2.216*".
+     * Nota legal de verificación en sala de ventas incorporada.
+   - Planos y Modelos:
+     * Se integraron los planos arquitectónicos reales:
+       - OFICINA TIPO A (`OFICINA TIPO A.webp`): 29 a 35 m², Uso Odontológico / Clínico, 1 Baño + Closet Insumos.
+       - OFICINA TIPO B (`OFICINA TIPO B.webp`): 40 a 64 m², Uso Odontológico / Clínico, 1 a 2 Baños.
+     * Actualizadas las pestañas de navegación interactiva, visor responsivo y modal de zoom.
+   - Sala de ventas: Av. La Dehesa 222, Lo Barnechea.
+
+E. PROYECTO ALTOS DE SANTA CRUZ (proyecto-altos-santa-cruz.html)
+   - Hero Bar y Cotizador:
+     * Precio base fijado en "DESDE UF 3.240*".
+     * Entrega confirmada en "PRONTA ENTREGA".
+     * Nota legal de verificación en sala de ventas incorporada.
+   - Contacto comercial:
+     * Se integró a Fabiola Aliaga (faliaga@iandes.cl) junto a Carolina Sáez (csaez@iandes.cl).
+   - Corrección de recurso:
+     * Se corrigió la ruta del ícono de baños (icon-bano.svg) que causaba error 404 por carácter especial.
+
+================================================================================
+2. PÁGINA DE PROMOCIONES Y BENEFICIOS (ofertas.html)
+================================================================================
+
+A. CUADROS DEL PORTAFOLIO (#proyectos-en-promocion)
+   Se homologaron los 5 cuadros del grid con los datos reales de sus fichas:
+   1. Andes Macul:
+      - Dirección/Tipología: Los Clarines 3093, Macul • Dptos 1 y 2 dormitorios
+      - Precio: Desde UF 3.920
+   2. Andes Ñuñoa:
+      - Dirección/Tipología: Capitán Orella 2575, Ñuñoa • Dptos 1 y 2 dormitorios
+      - Precio: Desde UF 3.938
+   3. Camino de la Villa:
+      - Dirección/Tipología: Camino de La Villa 671, Lo Barnechea • Departamentos 2 y 3 dormitorios
+      - Precio: Desde UF 11.502
+   4. Work Plaza:
+      - Dirección/Tipología: Av. La Dehesa 222, Lo Barnechea • Oficinas Corporativas
+      - Precio: Desde UF 2.216
+   5. Altos de Santa Cruz:
+      - Dirección/Tipología: Adriano Díaz 911, Santa Cruz • Casas 3D + 2B
+      - Precio: Desde UF 3.240
+
+B. TEXTOS LEGALES Y VIGENCIAS DE PROMOCIONES
+   Se actualizaron los disclaimers inferiores en las tarjetas de beneficios:
+   - Tarjeta "Recomienda un Amigo y Gana":
+     *Monto giftcard sujeto a cada proyecto
+     **Promoción activa en Altos de Santa Cruz y Work Plaza
+   - Tarjeta "Gastos Operacionales Gratis":
+     *Monto sujeto a cada proyecto
+     **Promoción activa en Altos de Santa Cruz y Andes Macul
+
+================================================================================
+3. PÁGINA DE PROYECTOS CONSTRUIDOS (proyectos-construidos.html)
+================================================================================
+
+   - Categoría: Unificada en "Edificación" para ambos proyectos (se eliminaron
+     las etiquetas de "Residencial" y "Corporativa & Oficinas").
+   - Contenido textual: Se eliminaron los subtítulos ("Exclusividad y confort..." /
+     "Innovación urbana...") y los párrafos descriptivos inferiores.
+   - Estructura limpia: Se mantuvieron únicamente el nombre del proyecto
+     (Andes La Dehesa / Andes de Córdova) y la ubicación (Santiago, Región Metropolitana).
+   - Imágenes: Se retiraron los badges flotantes sobre las fotografías
+     (Edificación · Iandes y año de entrega), manteniendo la ficha técnica y métricas
+     (año de construcción, meses y m² construidos) al pie de la tarjeta.
+     Se actualizaron las fotografías de Andes La Dehesa y Andes de Córdova con los
+     archivos AVIF optimizados (`Andes la Dehesa.avif` y `Andes cordova.avif`).
+     Se amplió la altura del marco de 280px a 360px y se calibró el encuadre (`object-position: center 18%`)
+     para exhibir la corona superior y mayor volumen estructural del edificio Andes de Córdova.
+
+================================================================================
+4. CONSISTENCIA TRANSVERSAL Y FORMULARIOS
+================================================================================
+
+   - contacto.html:
+     * Selector de proyectos actualizado de "Work Plaza Egaña (Ñuñoa)" a
+       "Work Plaza (Lo Barnechea)".
+     * Título de sala de ventas actualizado a "Sala de Ventas Work Plaza" (Av. La Dehesa 222).
+   - mail.php:
+     * Mapeo del backend actualizado a "'work-plaza' => 'Work Plaza (Lo Barnechea)'".
+   - index.html:
+     * Showcase de Andes Ñuñoa homologado a precio base UF 3.938.
+
+================================================================================
+5. OPTIMIZACIÓN SEO ON-PAGE & REDES SOCIALES (0% ALTERACIÓN VISUAL)
+================================================================================
+
+   - Meta Titles (<title>): Reorientados a intención de búsqueda por comuna y producto:
+     * index.html: Inmobiliaria Iandes | Departamentos y Casas en Santiago y Regiones
+     * proyecto-andes-macul.html: Departamentos en Venta en Macul | 1 y 2 Dormitorios | Andes Macul
+     * proyecto-andes-nunoa.html: Departamentos en Ñuñoa Entrega Inmediata | Andes Ñuñoa | Iandes
+     * proyecto-camino-villa.html: Departamentos en Lo Barnechea | 2 y 3 Dormitorios | Camino de la Villa
+     * proyecto-work-plaza.html: Venta de Oficinas en La Dehesa | Lo Barnechea | Work Plaza Iandes
+     * proyecto-altos-santa-cruz.html: Casas en Venta en Santa Cruz Colchagua | Pronta Entrega | Iandes
+     * ofertas.html: Promociones Inmobiliarias: Pie en 36 Cuotas y Gastos Gratis | Iandes
+     * subsidios-fogaes.html: Garantía FOGAES 10% Pie y Subsidios Hipotecarios | Iandes
+     * contacto.html: Contacto y Salas de Ventas | Inmobiliaria Iandes
+     * como-comprar.html: Guía de Compra: Cómo Comprar tu Departamento o Casa | Iandes
+     * preguntas-frecuentes.html: Preguntas Frecuentes | Inmobiliaria Iandes
+     * postventa.html: Postventa y Garantías | Inmobiliaria Iandes
+     * proyectos-construidos.html: Proyectos Construidos y Obras Entregadas | Inmobiliaria Iandes & Inarco
+     * blog.html: Blog y Tendencias Inmobiliarias | Inmobiliaria Iandes
+
+   - Meta Descriptions (<meta name="description">):
+     * Redactadas para maximizar el CTR en resultados de búsqueda orgánica.
+
+   - Open Graph & Twitter Cards:
+     * Integradas en todas las páginas del sitio (og:title, og:description, og:image, og:url,
+       og:type, og:site_name).
+     * Ahora al compartir enlaces en WhatsApp o redes sociales se genera una vista
+       previa atractiva con la fotografía real de cada página o proyecto.
+
+   - Favicon Oficial de Marca:
+     * Generado a partir del isotipo geométrico oficial de iAndes (rectángulo dorado y triángulo gris).
+     * Archivos creados: favicon.ico en raíz, assets/images/favicon-32x32.png y assets/images/favicon.png (192x192).
+     * Vinculado con etiquetas <link rel="icon"> y <link rel="apple-touch-icon"> en todas las páginas.
+
+   - Datos Estructurados Schema.org (JSON-LD):
+     * Integrados en el <head> de cada página:
+       - index.html: RealEstateAgent
+       - proyecto-andes-macul.html: ApartmentComplex
+       - proyecto-andes-nunoa.html: ApartmentComplex
+       - proyecto-camino-villa.html: ApartmentComplex
+       - proyecto-work-plaza.html: Place
+       - proyecto-altos-santa-cruz.html: SingleFamilyResidence
+       - contacto.html: ContactPage
+       - preguntas-frecuentes.html: FAQPage (genera preguntas desplegables en Google)
+
+================================================================================
+6. ARQUITECTURA DE TRACKING PARA GOOGLE ADS, GA4 Y GTM (assets/js/main.js)
+================================================================================
+
+   Se incorporó un script global con escuchadores automáticos que empujan eventos
+   a window.dataLayer y ejecutan gtag('event', ...) sin requerir cambios futuros en el HTML:
+
+   1. Evento 'whatsapp_click':
+      - Disparador: Clic en cualquier enlace con destino wa.me o whatsapp.com.
+      - Utilidad: Medición de prospectos de alta intención comercial por ejecutiva.
+   2. Evento 'lead_form_submitted':
+      - Disparador: Envío exitoso del formulario central de contacto.
+      - Utilidad: Medición de conversión principal en Google Ads.
+   3. Evento 'cotizador_modal_opened':
+      - Disparador: Clic en botón "Enviar Cotización" para apertura del cotizador digital.
+      - Utilidad: Micro-conversión de intención de compra.
+
+================================================================================
+7. PENDIENTES Y REQUISITOS PARA ACTIVAR LAS CAMPAÑAS EN GOOGLE ADS (SEM)
+================================================================================
+
+El código del sitio ya está 100% optimizado y preparado técnicamente.
+Para lanzar la pauta publicitaria en Google Ads, hace falta realizar las siguientes
+acciones comerciales y de configuración externa en la plataforma de Google:
+
+PASO 1: CREACIÓN Y VINCULACIÓN DE CUENTAS
+   [ ] Crear o acceder a la cuenta de Google Ads (ID de cliente de 10 dígitos).
+   [ ] Crear contenedor en Google Tag Manager (GTM) o propiedad de Google Analytics 4 (GA4).
+   [ ] Vincular la cuenta de Google Ads con GA4 para importar conversiones y audiencias.
+
+PASO 2: INSERCIÓN DEL CÓDIGO DE SEGUIMIENTO EN EL SITIO
+   [ ] Insertar el ID de Google Tag Manager (GTM-XXXXXXX) o de Google Ads (AW-XXXXXXX)
+       en el <head> de las páginas.
+       * NOTA TÉCNICA: No hace falta programar nada más en el sitio; los eventos
+         'whatsapp_click', 'lead_form_submitted' y 'cotizador_modal_opened' ya están
+         escritos en assets/js/main.js y se activarán automáticamente al pegar el ID.
+
+PASO 3: CONFIGURAR ACCIONES DE CONVERSIÓN EN GOOGLE ADS
+   [ ] Conversión Primaria 1: "Lead WhatsApp" (Disparada por el evento 'whatsapp_click').
+       * Vital: En Chile, el 50% al 65% de los leads inmobiliarios cierran por WhatsApp.
+   [ ] Conversión Primaria 2: "Lead Formulario Web" (Disparada por 'lead_form_submitted').
+   [ ] Conversión Secundaria: "Intención Cotizar" (Disparada por 'cotizador_modal_opened').
+
+PASO 4: CREACIÓN Y ESTRUCTURACIÓN DE CAMPAÑAS EN GOOGLE ADS
+   Dividir el presupuesto en campañas independientes para no canibalizar clics:
+   [ ] Campaña 1: Andes Macul (Búsqueda residencial e inversión en Macul / Metro L8).
+       - URL Final: https://iandes.cl/proyecto-andes-macul.html
+   [ ] Campaña 2: Andes Ñuñoa (Entrega inmediata, últimas unidades, sector Ñuñoa / Metro L6).
+       - URL Final: https://iandes.cl/proyecto-andes-nunoa.html
+   [ ] Campaña 3: Camino de la Villa (High-End Lo Barnechea, 2 y 3 dorms, ticket UF 11.500+).
+       - URL Final: https://iandes.cl/proyecto-camino-villa.html
+   [ ] Campaña 4: Work Plaza (Oficinas corporativas en Av. La Dehesa / segmento profesional y B2B).
+       - URL Final: https://iandes.cl/proyecto-work-plaza.html
+   [ ] Campaña 5: Altos de Santa Cruz (Casas aisladas con FOGAES / subsidio en Valle de Colchagua).
+       - URL Final: https://iandes.cl/proyecto-altos-santa-cruz.html
+   [ ] Campaña 6: Marca / Brand Protection (Búsquedas directas de "Iandes" e "Inarco").
+       - URL Final: https://iandes.cl/
+
+PASO 5: CARGAR LISTA MAESTRA DE PALABRAS CLAVE NEGATIVAS (A NIVEL DE CUENTA)
+   Para evitar gastar presupuesto en búsquedas sin intención de compra:
+   [ ] Palabras de Arriendo: arriendo, en arriendo, arriendos, alquiler, alquilar, renta mensual.
+   [ ] Palabras de Inmuebles Usados: usados, usado, departamento usado, segunda mano.
+   [ ] Palabras Laborales / RRHH: trabajo, empleo, empleos, enviar cv, postulación, rrhh, vacantes.
+   [ ] Palabras Irrelevantes: remate, remates judiciales, banco remates, tomas, campamentos, reclamos.
+
+PASO 6: CONFIGURAR EXTENSIONES DE ANUNCIO (ACTIVOS)
+   [ ] Extensiones de Vínculos a Sitios (Sitelinks): Promociones, Cotizador Online, Sala de Ventas.
+   [ ] Extensiones de Texto Destacado (Callouts): "Respaldo Constructora Inarco", "Pie en 36 Cuotas",
+       "Gastos Operacionales Gratis", "Atención en Sala de Ventas".
+   [ ] Extensiones de Ubicación: Vincular con Google Business Profile (Google Maps de las salas de venta).
+   [ ] Extensiones de Llamada: Teléfono comercial directo (+56 9 7998 4756).
+
+PASO 7: DEFINIR ESTRATEGIA DE PUJA Y PRESUPUESTO
+   [ ] Semanas 1 a 3: Estrategia de "Maximizar Clics" con CPC máximo controlado para generar
+       tráfico calificado y registrar las primeras 30-50 conversiones.
+   [ ] Desde la Semana 4: Cambiar a "Maximizar Conversiones" o "CPA Objetivo" (Costo por Lead Objetivo)
+       para que el algoritmo de Google Ads optimice automáticamente hacia los usuarios con
+       mayor probabilidad de cotizar o escribir por WhatsApp.
+
+================================================================================
+CONFIGURACIÓN DE ENVÍO DE CORREOS (PRUEBAS SMTP)
+================================================================================
+- Emisor SMTP: notificaciones.iandes@gmail.com (vía smtp.gmail.com:587)
+- Receptor de pruebas: cvalencia@boosted.cl
+- Archivos configurados: config.php y mail.php
+- Soporte: PHPMailer con STARTTLS (puerto 587) y SSL (puerto 465) adaptativo.
+- Origen permitido: iandes.cl, www.iandes.cl, localhost y 127.0.0.1.
+
+================================================================================
+FIN DEL REPORTE
+================================================================================
